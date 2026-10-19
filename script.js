@@ -15,7 +15,7 @@ const resetAttendanceBtn = document.getElementById("resetAttendanceBtn");
 //Track attendance
 
 let count = Number(localStorage.getItem("attendanceCount")) || 0;
-const maxCount = 2;
+const maxCount = 50;
 
 attendeeCount.textContent = count;
 waterCounter.textContent = Number(localStorage.getItem("waterCount")) || 0;
