@@ -25,7 +25,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -187,6 +188,26 @@ button .fas {
   text-align: center;
 }
 
+.reset-button {
+  width: 100%;
+  max-width: 500px;
+  min-width: 0;
+  height: auto;
+  margin: 10px auto 0;
+  padding: 8px 14px;
+  background-color: #e8f7fc;
+  color: #64748b;
+  border: 1px solid #e8f7fc;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.reset-button:hover {
+  background-color: #f1f5f9;
+  color: #334155;
+  box-shadow: none;
+}
+
 .attendance-header {
   display: flex;
   align-items: center;
@@ -321,6 +342,7 @@ select {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  align-items: start;
 }
 
 .team-card {
@@ -342,10 +364,35 @@ select {
   background-color: #fff7ed;
 }
 
+.team-card.water.winning-team {
+  background-color: #4dcbf5;
+}
+
+.team-card.zero.winning-team {
+  background-color: #57f589;
+}
+
+.team-card.power.winning-team {
+  background-color: #f7bc6a;
+}
+
 .team-name {
   font-size: 15px;
   font-weight: 500;
   color: #475569;
+}
+
+.team-attendees {
+  width: 100%;
+  margin-top: 12px;
+  list-style: none;
+}
+
+.attendee-row {
+  padding: 7px 4px;
+  border-top: 1px solid rgba(71, 85, 105, 0.16);
+  color: #334155;
+  overflow-wrap: anywhere;
 }
 
 /* Mobile responsive */
@@ -374,11 +421,20 @@ select {
     height: 50px;
   }
 
+  .reset-button {
+    width: 100%;
+    height: auto;
+  }
+
   .input-wrapper {
     flex-direction: column;
   }
 
   .teams-grid {
     grid-template-columns: 1fr;
+  }
+
+  .attendee-row {
+    align-items: flex-start;
   }
 }
